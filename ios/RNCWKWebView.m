@@ -146,6 +146,12 @@ static NSURLCredential* clientAuthenticationCredential;
         wkWebViewConfig.applicationNameForUserAgent = [NSString stringWithFormat:@"%@ %@", wkWebViewConfig.applicationNameForUserAgent, _applicationNameForUserAgent];
     }
 
+    if (_injectedJavaScriptBeforeContentLoaded) {
+       // If user has provided an injectedJavascript prop, execute it at the start of the document
+       WKUserScript *injectedScript = [[WKUserScript alloc] initWithSource:_injectedJavaScriptBeforeContentLoaded injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly:YES];
+        [wkWebViewConfig.userContentController addUserScript:injectedScript];
+    }
+
     if(_sharedCookiesEnabled) {
       // More info to sending cookies with WKWebView
       // https://stackoverflow.com/questions/26573137/can-i-set-the-cookies-to-be-used-by-a-wkwebview/26577303#26577303
