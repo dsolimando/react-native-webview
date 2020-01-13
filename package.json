@@ -5,11 +5,12 @@
   "typings": "index.d.ts",
   "author": "Jamon Holmgren <jamon@infinite.red>",
   "contributors": [
-    "Thibault Malbranche <malbranche.thibault@gmail.com>"
+    "Thibault Malbranche <malbranche.thibault@gmail.com>",
+    "Damien Solimando <dsolimandot@gmail.com>"
   ],
   "license": "MIT",
-  "version": "5.12.3-beta1",
-  "homepage": "https://github.com/react-native-community/react-native-webview#readme",
+  "version": "5.12.3",
+  "homepage": "https://github.com/dsolimando/react-native-webview#readme",
   "scripts": {
     "ci": "CI=true && yarn lint && yarn test",
     "ci:publish": "yarn semantic-release",
