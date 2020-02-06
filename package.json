@@ -1,5 +1,5 @@
 {
-  "name": "@proximus/react-native-webview",
+  "name": "react-native-webview",
   "description": "React Native WebView component for iOS and Android with backports",
   "main": "index.js",
   "typings": "index.d.ts",
